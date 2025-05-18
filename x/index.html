@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogify - Share Your Thoughts</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Blogify</h1>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+        <a href="explore.html"><i class="fas fa-compass"></i> Explore</a>
+        <a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a>
+        <a href="messages.html"><i class="fas fa-envelope"></i> Messages</a>
+      </div>
+      <!-- Add search container -->
+      <div class="search-container">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" class="search-input" id="search-input" placeholder="Search Blogify">
+        <div class="search-dropdown" id="search-dropdown">
+          <div class="search-tabs">
+            <div class="search-tab active" data-tab="posts">Posts</div>
+            <div class="search-tab" data-tab="users">Users</div>
+          </div>
+          <div class="search-results" id="search-results">
+            <!-- Search results will be populated here -->
+          </div>
+        </div>
+      </div>
+      <div class="nav-auth">
+        <!-- Add theme toggle button -->
+        <div class="theme-toggle" id="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </div>
+        <!-- Replace login/signup with user menu for logged-in state (for demo) -->
+        <div class="user-menu">
+          <button class="user-menu-toggle" id="user-menu-toggle">
+            <i class="fas fa-ellipsis-v"></i>
+          </button>
+          <div class="user-dropdown" id="user-dropdown">
+            <a href="profile.html" class="user-dropdown-item">
+              <i class="fas fa-user"></i> Profile
+            </a>
+            <a href="#" class="user-dropdown-item">
+              <i class="fas fa-cog"></i> Settings
+            </a>
+            <a href="#" class="user-dropdown-item">
+              <i class="fas fa-key"></i> Change Password
+            </a>
+            <a href="#" class="user-dropdown-item">
+              <i class="fas fa-bookmark"></i> Bookmarks
+            </a>
+            <a href="#" class="user-dropdown-item">
+              <i class="fas fa-chart-line"></i> Analytics
+            </a>
+            <a href="#" class="user-dropdown-item">
+              <i class="fas fa-palette"></i> Display
+            </a>
+            <a href="#" class="user-dropdown-item">
+              <i class="fas fa-shield-alt"></i> Privacy
+            </a>
+            <a href="#" class="user-dropdown-item">
+              <i class="fas fa-bell"></i> Notifications
+            </a>
+            <a href="#" class="user-dropdown-item">
+              <i class="fas fa-question-circle"></i> Help Center
+            </a>
+            <div class="user-dropdown-divider"></div>
+            <a href="#" class="user-dropdown-item">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </div>
+        </div>
+        <a href="login.html" class="login-btn">Log in</a>
+        <a href="signup.html" class="signup-btn">Sign up</a>
+      </div>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="sidebar">
+        <div class="trending">
+          <h3>Trending Topics</h3>
+          <ul>
+            <li><a href="#">#Technology</a></li>
+            <li><a href="#">#WebDevelopment</a></li>
+            <li><a href="#">#Programming</a></li>
+            <li><a href="#">#Design</a></li>
+            <li><a href="#">#ArtificialIntelligence</a></li>
+          </ul>
+        </div>
+        <div class="who-to-follow">
+          <h3>Who to follow</h3>
+          <div class="follow-card">
+            <img src="/placeholder.svg?height=50&width=50" alt="User avatar">
+            <div class="follow-info">
+              <h4>Jane Smith</h4>
+              <p>@janesmith</p>
+            </div>
+            <button class="follow-btn">Follow</button>
+          </div>
+          <div class="follow-card">
+            <img src="/placeholder.svg?height=50&width=50" alt="User avatar">
+            <div class="follow-info">
+              <h4>John Doe</h4>
+              <p>@johndoe</p>
+            </div>
+            <button class="follow-btn">Follow</button>
+          </div>
+          <div class="follow-card">
+            <img src="/placeholder.svg?height=50&width=50" alt="User avatar">
+            <div class="follow-info">
+              <h4>Sarah Johnson</h4>
+              <p>@sarahj</p>
+            </div>
+            <button class="follow-btn">Follow</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="feed">
+        <div class="post-form">
+          <img src="/placeholder.svg?height=50&width=50" alt="Your avatar" class="user-avatar">
+          <div class="post-input">
+            <textarea placeholder="What's happening?"></textarea>
+            <div class="post-actions">
+              <div class="post-attachments">
+                <button><i class="fas fa-image"></i></button>
+                <button><i class="fas fa-poll"></i></button>
+                <button><i class="fas fa-smile"></i></button>
+                <button><i class="fas fa-calendar"></i></button>
+              </div>
+              <button class="post-btn">Post</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="posts">
+          <div class="post">
+            <div class="post-avatar">
+              <a href="profile.html">
+                <img src="/placeholder.svg?height=50&width=50" alt="User avatar">
+              </a>
+            </div>
+            <div class="post-content">
+              <div class="post-header">
+                <a href="profile.html" class="post-user">
+                  <h4>Alex Morgan</h4>
+                  <span>@alexmorgan</span>
+                </a>
+                <span class="post-time">2h ago</span>
+              </div>
+              <div class="post-text">
+                <p>Just finished building a new website using HTML, CSS, and JavaScript. It's amazing how much you can accomplish with these three technologies!</p>
+              </div>
+              <div class="post-image">
+                <img src="/placeholder.svg?height=400&width=600" alt="Post image">
+              </div>
+              <div class="post-actions">
+                <button class="like-btn"><i class="far fa-heart"></i> <span>120</span></button>
+                <button class="comment-btn"><i class="far fa-comment"></i> <span>24</span></button>
+                <button class="share-btn"><i class="far fa-share-square"></i></button>
+              </div>
+              <div class="comments">
+                <div class="comment">
+                  <img src="/placeholder.svg?height=40&width=40" alt="User avatar">
+                  <div class="comment-content">
+                    <div class="comment-header">
+                      <h5>Emily Chen</h5>
+                      <span>@emilychen</span>
+                    </div>
+                    <p>Looks great! What technologies did you use for the backend?</p>
+                    <div class="comment-actions">
+                      <button><i class="far fa-heart"></i> <span>5</span></button>
+                      <button><i class="far fa-comment"></i> Reply</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="post">
+            <div class="post-avatar">
+              <a href="profile.html">
+                <img src="/placeholder.svg?height=50&width=50" alt="User avatar">
+              </a>
+            </div>
+            <div class="post-content">
+              <div class="post-header">
+                <a href="profile.html" class="post-user">
+                  <h4>Sarah Johnson</h4>
+                  <span>@sarahj</span>
+                </a>
+                <span class="post-time">5h ago</span>
+              </div>
+              <div class="post-text">
+                <p>Just published my article on "The Future of Web Development in 2023". Check it out and let me know your thoughts!</p>
+              </div>
+              <div class="post-actions">
+                <button class="like-btn"><i class="far fa-heart"></i> <span>85</span></button>
+                <button class="comment-btn"><i class="far fa-comment"></i> <span>12</span></button>
+                <button class="share-btn"><i class="far fa-share-square"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="post">
+            <div class="post-avatar">
+              <a href="profile.html">
+                <img src="/placeholder.svg?height=50&width=50" alt="User avatar">
+              </a>
+            </div>
+            <div class="post-content">
+              <div class="post-header">
+                <a href="profile.html" class="post-user">
+                  <h4>John Doe</h4>
+                  <span>@johndoe</span>
+                </a>
+                <span class="post-time">1d ago</span>
+              </div>
+              <div class="post-text">
+                <p>I've been learning about responsive design patterns lately. Here's a screenshot of my latest project that adapts perfectly to all screen sizes.</p>
+              </div>
+              <div class="post-image">
+                <img src="/placeholder.svg?height=400&width=600" alt="Post image">
+              </div>
+              <div class="post-actions">
+                <button class="like-btn"><i class="far fa-heart"></i> <span>210</span></button>
+                <button class="comment-btn"><i class="far fa-comment"></i> <span>45</span></button>
+                <button class="share-btn"><i class="far fa-share-square"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
